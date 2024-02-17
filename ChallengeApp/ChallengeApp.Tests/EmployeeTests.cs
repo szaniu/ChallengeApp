@@ -1,6 +1,6 @@
 namespace ChallengeApp.Tests
 {
-    public class Tests
+    public class EmployeeTests
     {
         [Test]
         public void WhenAddScore_ShouldReturnResult()
@@ -10,11 +10,11 @@ namespace ChallengeApp.Tests
             employee.AddScore(5);
             employee.AddScore(1);
             employee.AddScore(3);
-            employee.AddScore(-5);
+            employee.AddScore(5);
             //act
             var result = employee.Result;
             //assert
-            Assert.AreEqual(4, result);
+            Assert.AreEqual(14, result);
         }
         [Test]
         public void WhenAddMinusScore_ShouldReturnResult()
