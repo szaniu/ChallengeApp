@@ -1,6 +1,6 @@
 ﻿namespace ChallengeApp
 {
-    internal class Employee
+    public class Employee
     {
         private List<int> score = new List<int>();
 

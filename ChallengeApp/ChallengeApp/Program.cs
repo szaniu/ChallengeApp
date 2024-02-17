@@ -22,7 +22,7 @@ employee3.AddScore(5);
 employee3.AddScore(8);
 employee3.AddScore(3);
 
-List<Employee> employess = new List<Employee>()
+ List<Employee> employess = new List<Employee>()
 {
     employee1, employee2, employee3
 };
