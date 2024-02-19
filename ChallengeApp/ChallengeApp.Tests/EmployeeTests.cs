@@ -6,7 +6,7 @@ namespace ChallengeApp.Tests
         public void WhenAddScore_ShouldReturnResult()
         {
             // arrange
-            var employee = new Employee("Darek", "Kowalski", 29);
+            var employee = new Employee("Kasia", "Kowalska", 29);
             employee.AddScore(5);
             employee.AddScore(1);
             employee.AddScore(3);
@@ -20,7 +20,7 @@ namespace ChallengeApp.Tests
         public void WhenAddMinusScore_ShouldReturnResult()
         {
             // arrange
-            var employee = new Employee("Kasia", "Nowak", 28);
+            var employee = new Employee("Zuzia", "Nowak", 28);
             employee.AddScore(-5);
             employee.AddScore(8);
             employee.AddScore(1);
@@ -34,7 +34,7 @@ namespace ChallengeApp.Tests
         public void WhenAddOnlyMinusScore_ShouldReturnResult()
         {
             // arrange
-            var employee = new Employee("Kasia", "Nowak", 28);
+            var employee = new Employee("Darek", "Wiœniewski", 28);
             employee.AddScore(-5);
             employee.AddScore(-8);
             employee.AddScore(-1);

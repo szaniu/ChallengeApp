@@ -6,8 +6,8 @@
         public void GetTwoStringShouldTheSameValue()
         {
             // arrange
-            var employee1 = GetEmployee("Marek", "sjdhryu", 69);
-            var employee2 = GetEmployee("Marek", "dkdk8", 26);
+            var employee1 = GetEmployee("Darek", "sjdhryu", 69);
+            var employee2 = GetEmployee("Darek", "dkdk8", 26);
 
             // assert
             Assert.AreEqual(employee1.Name, employee2.Name);
@@ -26,8 +26,8 @@
         public void GetTwoNumbersShouldTheSameValue()
         {
             // arrange
-            var employee1 = GetEmployee("Kasia", "sjdhryu", 26);
-            var employee2 = GetEmployee("Zuzia", "dkdk8", 26);
+            var employee1 = GetEmployee("Zuzia", "sjdhryu", 26);
+            var employee2 = GetEmployee("Kasia", "dkdk8", 26);
 
             // assert
             Assert.AreEqual(employee1.Age, employee2.Age);
