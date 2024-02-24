@@ -12,11 +12,46 @@
 
         public string Name { get; private set; }
         public string Surname { get; private set; }
-       
+
         public void AddGrade(float grade)
         {
-            this.grades.Add(grade);
+            if (grade >= 0 && grade <= 100)
+            {
+                this.grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("Invalid grade");
+            }
         }
+
+        public void AddGrade(string grade)
+        {
+            if (float.TryParse(grade, out float result))
+            {
+                this.AddGrade(result);
+            }
+            else
+            {
+                Console.WriteLine("String is not float");
+            }
+        }
+
+        public void AddGrade(double grade)
+        {
+            AddGrade((float)grade);
+        }
+
+        public void AddGrade(long grade)
+        {
+            AddGrade((float)grade);
+        }
+
+        public void AddGrade(int grade)
+        {
+            AddGrade((float)grade);
+        }
+
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
