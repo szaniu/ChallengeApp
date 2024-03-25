@@ -1,12 +1,17 @@
 ﻿using ChallengeApp;
 
-
 Console.WriteLine("Witamy w programie XYZ do oceny Pracowników");
 Console.WriteLine("-------------------------------------------\n");
 
-var employee = new Employee();
+var employee = new Employee("Darek", "Szaniu");
+
 Console.WriteLine("Podaj ocenę pracownika: ");
 var inputFirst = Console.ReadLine();
+if (inputFirst == "q")
+{
+    Console.WriteLine("Zainicjowano opuszczenie programu bez wprowadzania oceny!");
+    return;
+}
 employee.AddGrade(inputFirst);
 
 while (true)
@@ -17,7 +22,15 @@ while (true)
     {
         break;
     }
-    employee.AddGrade(input);
+    
+    try
+    {
+        employee.AddGrade(input);
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine($"Exception catched:  {e.Message}");
+    }
 }
 
 var statistics = employee.GetStatistics();

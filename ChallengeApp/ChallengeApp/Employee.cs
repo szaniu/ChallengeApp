@@ -4,12 +4,10 @@ namespace ChallengeApp
 {
     public class Employee
     {
+        private const char sex = 'M';
+
         private List<float> grades = new List<float>();
 
-        public Employee()
-        {
-
-        }
         public Employee(string name, string surname)
         {
             this.Name = name;
@@ -27,7 +25,7 @@ namespace ChallengeApp
             }
             else
             {
-                Console.WriteLine("Out of range");
+                throw new Exception("Out of range");
             }
         }
 
@@ -43,7 +41,7 @@ namespace ChallengeApp
             }
             else
             {
-                Console.WriteLine("String is not float");
+                throw new Exception("String is not float");
             }
         }
 
@@ -67,28 +65,27 @@ namespace ChallengeApp
             {
                 case 'A':
                 case 'a':
-                    this.grades.Add(100);
+                    this.AddGrade(100);
                     break;
 
                 case 'B':
                 case 'b':
-                    this.grades.Add(80);
+                    this.AddGrade(80);
                     break;
                 case 'C':
                 case 'c':
-                    this.grades.Add(60);
+                    this.AddGrade(60);
                     break;
                 case 'D':
                 case 'd':
-                    this.grades.Add(40);
+                    this.AddGrade(40);
                     break;
                 case 'E':
                 case 'e':
-                    this.grades.Add(20);
+                    this.AddGrade(20);
                     break;
                 default:
-                    Console.WriteLine("Wrong letter");
-                    break;
+                    throw new Exception("Wrong letter");
             }
 
         }
