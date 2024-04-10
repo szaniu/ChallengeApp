@@ -3,7 +3,8 @@
 Console.WriteLine("Witamy w programie XYZ do oceny Pracowników");
 Console.WriteLine("-------------------------------------------\n");
 
-var employee = new Employee("Darek", "Szaniu");
+var employee = new Employee("Darek", "Szaniu", 'M');
+employee.ToString();
 
 Console.WriteLine("Podaj ocenę pracownika: ");
 var inputFirst = Console.ReadLine();
